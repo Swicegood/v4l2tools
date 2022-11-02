@@ -15,3 +15,5 @@ blocks:
             - 'docker pull $DOCKER_USERNAME/v4l2tools:latest-amd64 || true'
             - 'docker build --cache-from=$DOCKER_USERNAME/v4l2tools:latest-amd64 -t $DOCKER_USERNAME/v4l2tools:latest-amd64 .'
             - 'docker push $DOCKER_USERNAME/v4l2tools:latest-amd64'
+      secrets:
+        - name: dcokerhub
